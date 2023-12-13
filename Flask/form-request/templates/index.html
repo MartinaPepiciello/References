@@ -1,0 +1,24 @@
+<!-- --------------------------------------------------- -->
+<!-- Send a request to a Flask route through a HTML form -->
+<!-- --------------------------------------------------- -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Hello</title>
+    </head>
+
+    <body>
+        <h1>Hello, {{ username }}</h1>
+
+        <!-- Action must be the same as Flask route that processes the request -->
+        <!-- Use post to avoid showing parameters in address bar -->
+        <form action="/" method="post">
+            What is your name?
+            <!-- Set name parameter to retrieve value in Flask -->
+            <input type="text" name="username" autocomplete="off" placeholder="Your name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
